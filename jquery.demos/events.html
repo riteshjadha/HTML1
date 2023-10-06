@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="jquery.js"></script>
+    <script>
+
+        $(function () {
+            document.getElementById('h2').style.backgroundColor = 'skyblue';
+            // $('#btn').click(function () {
+            //     $('p').slideToggle(10000);
+            // });
+        $("#btn").on({
+         mouseenter:function(){
+            $(this).css('backgroundColor','lightgray');
+            //alert('mouseenter');
+           // $(this).toggle(alert('mouseenter'));
+           $(this).toggle(confirm('are you sure'));
+         },
+         click:function(){
+            $(this).css('backgroundColor','yellow');
+         }
+        })
+        });
+    </script>
+</head>
+
+<body>
+    <h2 id="h2">Events demos </h2>
+    <div id="div" style="background-color: lightgreen; margin: 100px; text-align: center;">
+        <p>
+            good morning sir i am ritesh babulal jadhao
+            i am from yavatmal district taluka pusad
+            i have resentlly completed in my bachalars degree
+            in BSc microbilogy from amravati univarcity and also
+            i have completed in dot net core devlopment in engeneare
+
+        </p>
+    </div>
+    <button id="btn">click me!!</button>
+
+</body>
+
+</html>

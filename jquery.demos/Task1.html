@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        $(function(){
+            $('ul li ul li ul li').click(function(){
+                $(this).css('background-color', 'skyblue'),
+                $(this).parent().parent().css('background-color', 'skyblue'),
+                $(this).parent().css('background-color', 'white') ,
+                $(this).parent().parent().parent().parent().css('background-color', 'skyblue'),
+                $(this).parent().parent().parent().css('background-color', 'white')   
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>Country state city selection </h2>
+    <h3>Countrys</h3>
+    <ul>
+        <li>india
+            <ul>
+                <li>maharastra
+                    <ul>
+                        <li>mumbai</li>
+                        <li>pune</li>
+                        <li>yavatmal</li>
+                    </ul>
+                </li>
+                <li>gujrat
+                    <ul>
+                        <li>surt</li>
+                        <li>alihabad</li>
+                        <li>ahmdabad</li>
+                    </ul>
+                </li>
+                <li>karnatka
+                    <ul>
+                        <li>banglur</li>
+                        <li>xyz</li>
+                        <li>xyz</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

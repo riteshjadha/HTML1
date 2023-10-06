@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Country, State, and City Selector</title>
+    <style>
+        .selected {
+            color: red; /* Change the color as needed */
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Add a click event handler for the list items
+            $("li").click(function() {
+                // Remove the "selected" class from all list items
+                $("li").removeClass("selected");
+                
+                // Add the "selected" class to the clicked list item
+                $(this).addClass("selected");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Country, State, and City Selector</h1>
+    <ul>
+        <li class="country">
+            USA
+            <ul>
+                <li class="state">
+                    New York
+                    <ul>
+                        <li class="city">New York City</li>
+                        <li class="city">Buffalo</li>
+                    </ul>
+                </li>
+                <li class="state">
+                    California
+                    <ul>
+                        <li class="city">Los Angeles</li>
+                        <li class="city">San Francisco</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="country">
+            Canada
+            <ul>
+                <li class="state">
+                    Ontario
+                    <ul>
+                        <li class="city">Toronto</li>
+                        <li class="city">Ottawa</li>
+                    </ul>
+                </li>
+                <li class="state">
+                    British Columbia
+                    <ul>
+                        <li class="city">Vancouver</li>
+                        <li class="city">Victoria</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

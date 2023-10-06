@@ -1,0 +1,113 @@
+@import url("http:/fonts.googleapis.com/css2?dfamily=Inter:wght@300;600&display=swap");
+
+
+*{
+
+    box-sizing: border-box;
+}
+body {
+    text-align: center;
+    background-color: lightblue;
+    padding: 100px;
+    margin: 100px;
+    font-family: "Inter" sans-serif;
+    background-color : linear-gradient(#131313, #eee);
+    padding: 40;
+}
+.container{
+
+    min-height: solid(80% - 30px * 2);
+    display: grid;grid-template-columns:50% 50% ;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.login-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: content;
+    padding-left:150px ;
+    background-color: white;
+}
+.login-right{
+
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    img{
+        width: 80%;
+    }
+}
+.loging-header{
+
+    width: 450px;
+    &-content {
+
+        display: flex ;
+        flex-direction: column;
+        gap: 35px;
+    }
+    &-footer {
+        display: flex;
+        gap: 30px;
+        margin-top: 70px;
+        a {
+            flex: 6;
+            border: 1px solid black;
+            border-radius: 100px;
+            padding: 6rem;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            color: black;
+            text-decoration: none;
+            
+            &:hover {
+
+                background-color: #eee;
+            }
+        }
+    }
+}
+.form-item label:not(.checkboxLable){
+
+    display: inline-block;
+    background-color: rgb(235, 217, 130);
+    margin-bottom: 10px;
+    position: absolute;
+    padding: 0 10px;
+    transform: translate(30px, -10px);
+    font-size: 14px;
+}
+input[type='text'],
+input[type='Password'] {
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid black;
+    padding: 5px;
+    transition: background.5s;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+input[type='checkbox'] {
+width: 20px;
+height: 20px;
+color: yellowgreen;
+}
+button {
+    border: none;
+    background: local;
+    color: white;
+    padding: 1rem;
+    border-radius: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    height: 55px;
+    cursor: pointer;
+}
+

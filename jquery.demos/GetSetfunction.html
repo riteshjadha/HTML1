@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        $(function () {
+            $('#btn2').click(function () {
+                // $('#a1').attr({
+                //     'href':'http://www.Facebook.com'
+                // });
+                $('#a1').attr('href', 'http://www.facebook.com');
+            });
+
+            $('#btn3').click(function () {
+                if ($(this).text() == 'show') {
+                    $('#pwd').attr('type', 'text');
+                    $(this).text('hide');
+                }
+                else {
+                    $('#pwd').attr('type', 'password');
+                    $(this).text('show');
+                }
+            });
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <h2>Get Set attribute </h2>
+
+    <a href="http://www.google.com" target="_self" id="a1">visit google </a>
+    <br>
+    <button id="btn1">get attribute</button> |
+    <button id="btn2">set attribute</button>
+    <br><br>
+    <a id="a2">visit Facebook</a>
+    <br>
+    Password : <input type="password" id="pwd" /> <button id="btn3">show</button>
+
+</body>
+
+</html>

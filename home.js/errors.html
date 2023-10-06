@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Errors handling javascript</h2>
+<button onclick="closewindoe()">click to close window </button>
+    <script>
+function closewindoe(){
+    window.close();
+}
+
+
+
+     window.onerror = function(massage, url, line){
+        document.write(`massage : ${massage}<br/>
+        url : ${url}<br/>
+        line number : ${line}<br/>`)
+     }
+
+        // error handling using this try and catch block
+        // try {
+        //     showDetails();
+        // } catch (e) {
+        //     document.write(`there is same error whith page . please try later.`)
+        // }
+        showDetails();
+    </script>
+</body>
+
+</html>

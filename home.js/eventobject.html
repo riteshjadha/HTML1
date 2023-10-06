@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Event object demo </h2>
+    <input type="button" value="click me**" onclick="btnfunction(event)" onmousedown="btnfunction(event)"
+        onmouseup="btnfunction(event)" />
+    <hr>
+    <p onclick="btnfunction(event)" style="cursor: pointer;">this is clickable paragraph text </p>
+    <hr>
+    <textarea id="message" cols="50" rows="10" readonly=""></textarea>
+
+
+    <script>
+
+        var message = document.getElementById('message');
+        message.value = '';
+        function btnfunction(event) {
+            // console.log(event);
+           // debugger; 
+            message.value += `event name : ${event.type} \n`;
+            message.value += `tag name : ${event.target.tagName}\n`;
+            message.value += `tag type : ${event.target.type}\n`;
+            message.value += `x-axis : ${event.clientX}\n`;
+            message.value += `y-axis : ${event.clientY}\n`;
+        } 
+    </script>
+</body>
+
+</html>

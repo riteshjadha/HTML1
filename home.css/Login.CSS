@@ -1,0 +1,19 @@
+h1{
+    text-align: center;
+    size-adjust: 10px;
+    color: cadetblue;
+}
+form{
+    background-color: darksalmon;
+    text-align-last: center;
+    box-sizing: content-box;
+    margin: 10%;
+    padding: 10%;
+}
+button{
+    font-weight: bold;
+    color: blue;
+    text-decoration: solid;
+    margin-bottom: 10px;
+    padding-inline-start: 5%;
+}

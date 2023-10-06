@@ -1,0 +1,46 @@
+h1{
+    background-color: lightblue;
+    margin: 100px;
+    padding: center;
+    text-align: center;
+    text-decoration: solid;
+
+}
+h3 {
+    margin-inline-end: 10px;
+
+}
+form {
+    background-color: bisque;
+    margin: 1px;
+    padding: 1px;
+    display: inline-block;
+     margin-top: 1px; 
+    text-align: center;
+
+    width: 100%;
+    height: 100%;
+    
+}
+div{
+   
+    background-position: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px black;
+    margin: auto;
+    padding: 0 0 14px 0;
+    width: 396px;
+}
+span{
+    font-size: 18px;
+    line-height: 22px;
+}
+input{
+    margin:10px ;
+    text-align: center;
+}
+button{
+    margin: 10px;
+    background-color: blue;
+    color: white;
+}

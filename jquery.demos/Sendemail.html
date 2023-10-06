@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Send email</h2>
+    <table>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" id="email"></td>
+        </tr>
+        <tr>
+            <td>Subject</td>
+            <td><input type="text" id="emailsubject" /></td>
+        </tr>
+        <tr>
+            <td>Body</td>
+            <td><textarea id="textarea" cols="30" rows="10"></textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button id="sendEmail">Send</button> |
+                <button id="clear">Clear</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <label id="message"></label>
+            </td>
+        </tr>
+    </table>
+
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        $(function () {
+            $('#sendemail').click(function () {
+                var Email = $('email').val();
+                var Subject = $('emailsubject').val();
+                var Body = $('textarea').val();
+
+
+                var emailData = {
+                    Toemail: Email,
+                    emailsubject: Subject,
+                    emailbody: body,
+                    IsBodyHtml: true
+                };
+
+                $.ajax({
+                    url: 'http://113.193.63.106:4050/api/email',
+                    type: 'post',
+                    dataType: 'json',
+                    data: JSON.stringify(emailData),
+                    containType: 'appliction/json; charset=utf-8',
+                    success: function (response) {
+                        $('#message').text('Email sent successfully');
+                        $('#email').val('');
+                        $('#emailsubject').val('');
+                        $('#textarea').val('');
+                    },
+                    error: function (reason) {
+                        alert('sendemail call failde');
+                        console.log(reason)
+                    }
+
+                });
+            });
+            $('#clear').click(function () {
+                $('#message').text('');
+                $('#email'),val('');
+                $('#emailsubject').val('');
+                $('#textarea').val('');
+            });
+
+        });
+    </script>
+
+
+</body>
+
+</html>

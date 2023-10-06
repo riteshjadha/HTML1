@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Images demo </h2>
+    <div style="text-align: center;">
+        <button><</button>
+        <img src="images1/2..jpg" width="100px" height="60px" onclick="bigSizeImage(this.src)"/>
+        <img src="images1/3..jpg" width="100px" height="60px"onclick="bigSizeImage(this.src)"/>
+        <img src="images1/1.jpg" width="100px" height="60px"onclick="bigSizeImage(this.src)"/>
+<button>></button>
+    </div>
+    <div style="text-align: center;">
+        <button onclick="startshow()">start slide show </button>
+        <button onclick="stopshow()">stop slid show </button>
+    </div>
+    <img  id="siteimage" width="30%" height="300px" style="margin-left: 350px;" />
+
+    <script>
+        var images1path = ['images1/2..jpg', 'images1/3..jpg', 'images1/1.jpg'];
+        var imgeIndex = 0;
+        function startshow() {
+            intervalId = setInterval(setImage, 1000);
+        }
+        function setImage() {
+            var imElement = document.getElementById('siteimage');
+            imElement.setAttribute('src', images1path[imgeIndex]);
+            
+            if(imgeIndex == images1path.length - 1){
+                imgeIndex = 0;
+            } else{
+                imgeIndex++;
+            }
+        }
+
+
+        function stopshow() {
+            clearInterval(intervalId);
+        }
+
+        function bigSizeImage(){
+            var imElement = document.getElementById('siteimage');
+            imElement.setAttribute('src', images1path[imgeIndex]);
+             
+            
+        }
+
+    </script>
+</body>
+
+</html>

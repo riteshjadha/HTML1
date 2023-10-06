@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>string function </h2>
+    input: <input type="text" id="input" style="width: 50%;" />
+    <button onclick="process()">click me!!</button>
+    <br><br>
+    string with numbers: <input type="text" id="numbersstring"/>
+    <button onclick="getnumber()">Get number</button>
+    <hr>
+    <textarea id="message" cols="70" rows="10"></textarea>
+
+    <script>
+        var message = document.getElementById('message');
+        message.value = '';
+        var input = document.getElementById('input');
+        input.value = '';
+        function process() {
+            // message.value = input.value;
+            //var result = input.value.replace('ritesh', 'sanket');
+            //    var result = input.value.replace(/ritesh/ig, 'sanket');
+            // var result = input.value.split(/ritesh/ig);
+            // var result = input.value.split(/ /ig);
+            // var result = input.value.match(/ritesh/ig);
+             var result = input.value.search(/@/ig);
+            message.value = result;
+        }
+
+        function getnumber(){
+            var numberString = document.getElementById('numbersstring').value ; 
+           // message.value = result;
+          // var result= numberString.match(/\d+/g);
+          //var result = numberString.match(/\d\d/g);
+         // var result = numberString.match(/[a-z]/g);
+           message.value= result; 
+        }
+    </script>
+</body>
+
+</html>

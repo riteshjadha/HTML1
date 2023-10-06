@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+</head>
+
+<body>
+    <h2>DataTable function </h2>
+    <table border="1" id="students">
+        <thead>
+            <th>
+                <tr>
+                    <th>rollnumber</th>
+                    <th>name</th>
+                    <th>age</th>
+                </tr>
+            </th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>01</td>
+                <td>sanket</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>vikash</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>akash</td>
+                <td>28</td>
+            </tr>
+            <tr>
+                <td>04</td>
+                <td>shivani</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>05</td>
+                <td>puja</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>06</td>
+                <td>kartik</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>07</td>
+                <td>ritesh</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>08</td>
+                <td>parnjali</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>09</td>
+                <td>aniket</td>
+                <td>26</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>nayan</td>
+                <td>17</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+
+    <script>
+        $(function () {
+            $('#students').DataTable();
+        });
+    </script>
+</body>
+
+</html>

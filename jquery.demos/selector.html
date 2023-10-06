@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <script>
+        $(function () {
+            document.getElementById('h2').style.backgroundColor = 'skyblue'
+            //$('.btn').css('backgroundColor', 'yellow');
+
+            $('div :even').css('backgroundColor', 'yellow');
+            $('div :odd').css('backgroundColor', 'skyblue');
+
+            $('.d1').hide();
+            $('#btn').click(function () {
+                $('.d1').show();
+                $('#btn').css('backgroundColor','green');
+                alert('button is clicked and your computer is hacked thanks for visiting websitea');
+
+            });
+
+            $('#btn').click(function () {
+
+            });
+        
+
+        });
+
+
+
+
+    </script>
+
+    <h2 id="h2">selector jquery </h2>
+    <br><br>
+    <div class="d1">
+        <p id="p1">frist parigrapha</p>
+        <p id="p2">second parigrapha</p>
+        <p id="p3">thard parigrapha</p>
+        <p id="p4">froth parigrapha</p>
+        <p id="p5">fifth parigrapha</p>
+        <p id="p6">sixith parigrapha</p>
+    </div>
+
+    <button id="btn"> show the paragraph</button>
+
+
+</body>
+
+</html>

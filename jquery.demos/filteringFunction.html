@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        $(function(){
+            $('button').click(function(){
+                //$('p').first().css('background-color', 'skyblue'),
+               // $('p').last().css('background-color', 'skyblue')
+                $('p').filter('#p').css('background-color', 'skyblue')
+            });
+        });
+    </script>
+</head>
+<body>
+   <h2>Filtering Function Demos</h2>
+   <p id="p">first paragraph</p>
+   <p>second paragraph</p>
+   <p id="p">thard paragraph</p>
+   <p>froth paragraph</p> 
+   <p id="p">fifth paragraph</p>
+   <hr>
+   <button>filtering the paragraph</button>
+</body>
+</html>

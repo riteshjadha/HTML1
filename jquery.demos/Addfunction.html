@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        $(function(){
+            $('#btn').click(function (){
+                // $('#div1').append('appent text');
+                // $('#div1').prepend('prepend text');
+                // $('#div1').after('after text');
+                // $('#div1').before('before text');
+
+                $('#div1').before('<a href = http://www.facebook.com>visite </a>');
+                $('#div1').after('<inpute type = text />');
+                $('#div1').append('<button /> submit');
+                $('#div1').prepend('<hr>');
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>Add function Demos</h2>
+
+    <div id="div1">
+        div content
+        
+    </div>
+    <br>
+    <button id="btn">click me!!</button>
+</body>
+</html>

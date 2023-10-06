@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <style>
+        select {
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>DropDwon demos </h2>
+    <select> State :
+        <option value="1">--select state--</option>
+        <option value="2">maharastra</option>
+        <option value="3">karnatka</option>
+        <option value="4">gujrat</option>
+        <option value="5">chnaie</option>
+        <option value="6">pune</option>
+        <option value="7">ghat kopar</option>
+        <option value="8">yavtmal</option>
+        <option value="9">nagpur</option>
+        <option value="10">amravti</option>
+    </select>
+
+    <script>
+        $(function () {
+            $('select').select2();
+        });
+    </script>
+</body>
+
+</html>

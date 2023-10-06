@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body .worapper {
+    height: 100%;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    margin: 0;
+    padding: 0 24px;
+    background-image: url(images\low-poly-grid-haikei.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    animation: rotate 6s infinite alternate linear;
+}
+
+.login-card {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    margin: 0 20px;
+    padding: 70px 30px 44px;
+    border-radius: 1.25rem;
+    background: white;
+    text-align: center;
+}
+
+.login-card>h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 12px;
+
+}
+
+.login-card>h3 {
+    color: black;
+    margin: 0 0 30px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.login-from {
+    width: 100%;
+    margin: 0;
+    display: grid;
+    gap: 16px;
+}
+
+.login-from>input,
+.login-from>button {
+    width: 100%;
+    height: 50px;
+}
+
+.login-from>input {
+    border: 2px solid;
+    font-family: inherit;
+    font-size: 15px;
+    padding: 0 16px;
+    border-radius: 1.25rem;
+    transition: all 0.375s;
+
+}
+
+.login-from>input:hover {
+    border: 2px solid blue;
+}
+
+.login-from>button {
+    cursor: pointer;
+    width: 100%;
+    padding: 0 16px;
+    border-radius: 1.25rem;
+    background-color: #4444f4;
+    color: white;
+    border: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all 0.375s;
+
+}
+
+.login-from>button:hover {
+    background-color: blue;
+}
