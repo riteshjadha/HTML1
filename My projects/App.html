@@ -78,7 +78,7 @@ body {
             <ul class="bg-primary  text-white rounded-1">
                 <li><a href="Home.html" class="active">Home</a></li>
                 <li><a href="https://mail.google.com/">About us</a></li>
-                <li class="rightSide"><a href="login.html">Login</a></li>
+                <li id="login" class="rightSide"><a href="login.html">Login</a></li>
                 <li class="rightSide"><a href="create.html">Register</a></li>
                 <h3>Vhaash technologies private Limited</h3>
                 <p>EXPERTISE IN THE FOLLOWING INDUSTRIES!! ... With our diverse industry expertise, Vhaash Technologies
@@ -96,6 +96,14 @@ body {
         <img src="img/Web-Development.png" />
     </marquee>
 
+<script src="node_modules/@popperjs/core/dist/cjs/enums.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#login').click(function() {
+            alert('login clicked').href = "login.html";
+        });
+    });
+</script>
 </body>
 
 </html>

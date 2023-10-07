@@ -120,6 +120,14 @@
         color: white;
         padding: 14px 20px;
     }
+    #exampleInputPassword1{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        
+    }
+    
 
 
 </style>
@@ -131,13 +139,13 @@
  <marquee behavior="scroll" direction="left">
     VHaaSh Technologies Private Limited
  </marquee>
- <form method="post" action="login.php">
+ <form class="/action_page.php" >
     <div class="mb-3"></div>
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="exampleInputEmail1" class="form-label">Email:</label>
+    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="enter email address">
     <div class="mb-3"></div>
     <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="enter password">
     <hr>
     <div class="mb-3"></div>
     <button type="submit" class="btn btn-success">Log In</button>
