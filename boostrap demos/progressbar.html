@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+        
+</head>
+</head>
+
+<body>
+    <h2 class="container text-uppercase">progress bar </h2>
+    <div class="progress">
+        <div class="progress-bar" style="width: 30%;">30%</div>
+    </div>
+    <hr>
+    <div class="progress">
+        <div class="progress-bar-animated bg-info" style="width: 50%;">50%</div>
+    </div>
+    <hr>
+    <div class="progress">
+        <div class="progress-bar-striped bg-success" style="width: 70%;">70%</div>
+    </div>
+    <hr>
+    <div class="progress">
+        <div class="progress-bar progress-bar-animated bg-danger" style="width: 75%;">75%</div>
+    </div>
+
+    <hr>
+    <div class="progress">
+        <div class="progress-bar" style="width: 75%;">
+            75% completed
+        </div>
+    </div>
+    <hr>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width: 75%;">
+            75% completed
+        </div>
+    </div>
+    <hr>
+    <div class="progress">
+        <div id="divprogress" class="progress-bar progress-bar-striped progress-bar-animated bg-primary" style="width: 1%;">
+            1% 
+        </div>
+    </div>
+
+    <script>
+        var parsenteg = 1;
+        function setprogressbar() {
+            var progresh = document.getElementById("divprogress");
+            progresh .innerHTML = `${parsenteg} % complited`;
+            progresh.style.width =`${parsenteg}%`;
+            if (progresh <100 ){
+                parsenteg+=10;
+            }else{
+                clearInterval(intervalid);
+            }
+        }
+       intervalid =setInterval(setprogressbar, 1000);
+    </script>
+</body>
+
+</html>
