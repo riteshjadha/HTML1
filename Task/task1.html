@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <h2>Name length should from 5 to 20 characters (Min : 5 & Max : 20)</h2>
+    <div>
+        <input id="input" type="text"/>
+        <button id="btn">Submit</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                var name = $("#input").val();
+                if(name.length < 5 || name.length > 20){
+                    alert("Name length should from 5 to 20 characters (Min : 5 & Max : 20)");
+                    return false;
+                }
+                else{
+                    alert("Name length is valid");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

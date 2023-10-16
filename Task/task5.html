@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <h2>	Add a dropdown above from and to date 
+        a.	Select Range = 7 days, 1 month, 3 month, 1 year 
+        By default, end date will be current date 
+        </h2>
+        <select id="select">
+            <option value="">Select Range</option>
+            <option value="7">7 days</option>
+            <option value="1">1 month</option>
+            <option value="3">3 month</option>
+            <option value="12">1 year</option>
+        </select>
+        <input id="input" type="date"/>
+        <button id="btn">Submit</button>
+        <script>
+            $(document).ready(function(){
+                $("#btn").click(function(){
+                    var input = $("#input").val();  
+                    var select = $("#select").val();
+                    if(input.indexOf(select) < 0){
+                        alert("Add a dropdown above from and to date a.    Select Range = 7 days, 1 month, 3 month, 1 year By default, end date will be current date ");
+                        return false;
+                    }
+                    else{
+                        alert("Date is valid");
+                    }
+
+                });
+            });
+        </script>
+</body>
+</html>

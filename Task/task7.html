@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <!-- <h2>Take input from textbox
+        Count number of vowels 
+        </h2>
+        <form action="">
+            <input type="text" name="text" id="text">
+            <input type="submit" value="Submit">
+            <p id="result">vowels count</p>
+
+        </form>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("text").value;
+                var vowels = ["a", "e", "i", "o", "u"];
+                var count = 0;
+                for (var i = 0; i < x.length; i++) {
+                    for (var j = 0; j < vowels.length; j++) {
+                        if (x[i] == vowels[j]) {
+                            count++;
+                        }
+                    } 
+                    if (count == 0) {
+                        document.getElementById("result").value = "No vowels";
+                    } else {
+                        document.getElementById("result").value = count;
+                    }
+                    count = 0;
+                    x = "";
+                    x = document.getElementById("text").value;
+                    x = "";
+                    // console.getElementById("text").value = "";
+                    // console.getElementById("result").innerHTML = "";
+                }
+
+            }
+        </script> -->
+
+        <label for="textInput">Enter Text:</label>
+        <input type="text" id="textInput" placeholder="Type your text here">
+        <button onclick="countVowels()">Count Vowels</button>
+        <p id="result">Number of vowels: </p>
+      
+        <script>
+          function countVowels() {
+            const inputText = document.getElementById("textInput").value.toLowerCase(); // Convert to lowercase for case insensitivity
+            const vowelCount = inputText.match(/[aeiou]/g).length;
+      
+            document.getElementById("result").textContent = "Number of vowels: " + vowelCount;
+          }
+        </script>
+
+</body>
+</html>

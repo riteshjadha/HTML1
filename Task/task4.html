@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <h2>Before mobile number show a dropdown (select tag) with country code [   ^]</h2>
+   <select  id="select">
+    <option value="">Select Country Code</option>
+    <option value="+1">+1 (United States)</option>
+    <option value="+44">+44 (United Kingdom)</option>
+    <option value="+91">+91 (India)</option>
+   </select>
+   <input id="input" type="tel"/>
+   <button id="btn">Submit</button>
+   <script>
+    $(document).ready(function(){
+        $("#btn").click(function(){
+            var input = $("#input").val();
+            var select = $("#select").val();
+            if(input.indexOf(select) < 0){
+                alert("Before mobile number show a dropdown (select tag) with country code [   ^]");
+                return false;
+            }
+            else{
+                alert("Mobile number is valid");
+            }
+        }); 
+    });
+   </script>
+</body>
+</html>

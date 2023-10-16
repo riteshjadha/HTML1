@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <h2>Email last domain name after . (min 2 to 5 characters)</h2>
+    <div>
+        <input id="input" type="email"/>
+        <button id="btn">Click me</button>
+    </div>
+    <script>
+        $(console).ready(function(){
+            $("#btn").click(function(){
+                var email = $("#input").val();
+                if(email.indexOf(".") < 2 || email.indexOf(".") > 5){
+                    alert("Email last domain name after. (min 2 to 5 characters)");
+                    return false;
+                }
+                else{
+                    alert("Email is valid");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

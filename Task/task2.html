@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <h2>Password length should from 8 to 16 characters (Min : 8 & Max : 16)</h2>
+    <div>
+        <input id="input" type="password"/>
+        <button id="btn">Submit</button>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                var password = $("#input").val();
+                if(password.length < 8 || password.length > 16){
+                    alert("Password length should from 8 to 16 characters (Min : 8 & Max : 16)");
+                    return false;
+                }
+                else{
+                    alert("Password length is valid");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
